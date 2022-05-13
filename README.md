@@ -52,21 +52,53 @@ As a user, I want to:
 | Game | Will render the information about a specific game and like button / total for that game | State |
 | Footer | Will render static information - link to LinkedIn / GitHub and API Attribution | Static Info |
 
+## Database Endpoints
+Create: /game/create
+Read: /game/:id
+Update: /game/update/:id
+Delete: /game/delete
+
 ## API
 [IGDB API](https://api-docs.igdb.com/#about) - Video Game API
 
 ### Game Response
 Will only need a few of these responses, will be using those select responses to seed a MongoDB to allow for faster selection of values and to add a few of my own needed values. Might create my own database, since the Game Model will need the following fields:
 ```
-{
-    name:
-    logo:
-    summary:
-    heroes:
-    villains:
-    likes:
-    release date:
-    release system:
+Game: {
+  name: {
+    type: String,
+      required: [true, "Games must be named"]
+  },
+    logo: {
+      type: String,
+        required: [true, "Games must have an image"]
+    },
+      summary: {
+      type: String,
+        required: [true, "Games must have a summary"]
+    },
+      likes: {
+        type: number,
+          default: 0
+      },
+        release_system: {
+      type: String,
+        required: [true, "Games must have a release system"]
+    },
+      release_date: {
+        type: String,
+          required: [true, "Games must have a release date"]
+      },
+        heroes: {
+          type: Array
+          name: ["array of hero names"], // If doing stretch, will need to update this to hero objects
+            required: [true, "Games must have heroes"]
+        },
+        villains: {
+            type: Array,
+              name: ["array of villain names"]
+              required: [true, "Games must have villains"]
+          }
 }
 ```
 
