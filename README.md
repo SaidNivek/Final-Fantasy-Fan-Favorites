@@ -54,8 +54,11 @@ As a user, I want to:
 
 ## Database Endpoints
 Create: /game/create
+
 Read: /game/:id
+
 Update: /game/update/:id
+
 Delete: /game/delete
 
 ## API
