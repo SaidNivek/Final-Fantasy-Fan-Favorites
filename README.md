@@ -53,10 +53,10 @@ As a user, I want to:
 | Footer | Will render static information - link to LinkedIn / GitHub and API Attribution | Static Info |
 
 ## Database Endpoints
-Create: /game/create
-Read: /game/:id
-Update: /game/update/:id
-Delete: /game/delete
+- Create: /game/create
+- Read: /game/:id
+- Update: /game/update/:id
+- Delete: /game/delete
 
 ## API
 [IGDB API](https://api-docs.igdb.com/#about) - Video Game API
