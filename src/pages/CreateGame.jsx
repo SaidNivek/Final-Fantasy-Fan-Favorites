@@ -42,67 +42,98 @@ const CreateGame = (props) => {
     return (
         <div className="container">
             <form onSubmit={handleSubmit}>
-                <input
-                    type='text'
-                    value={newForm.name}
-                    name='name'
-                    placeholder='game name'
-                    onChange={handleChange}
-                />
-                <input
-                    type='number'
-                    value={newForm.number}
-                    name='number'
-                    placeholder='game number (ex. 1 or 15)'
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.logo}
-                    name='logo'
-                    placeholder='game logo (url)'
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.summary}
-                    name='summary'
-                    placeholder='game summary'
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.release_system}
-                    name='release_system'
-                    placeholder="game's original release system"
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.release_date}
-                    name='release_date'
-                    placeholder="game's original release date"
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.heroes}
-                    name='heroes'
-                    placeholder="game's protagonists"
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    value={newForm.villains}
-                    name='villains'
-                    placeholder="game's villains"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Add Game" />
+                <div className="form-group">
+                    <label className="label" for="name">Game Name</label>
+                    <input
+                        type='text'
+                        value={newForm.name}
+                        name='name'
+                        placeholder='game name'
+                        onChange={handleChange}
+                        className="form-control" 
+                    />                    
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Game Number</label>
+                    <input
+                        type='number'
+                        value={newForm.number}
+                        name='number'
+                        placeholder='game number (ex. 1 or 15)'
+                        onChange={handleChange}
+                        className="form-control"  
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Game Logo</label>
+                    <input
+                        type='text'
+                        value={newForm.logo}
+                        name='logo'
+                        placeholder='game logo (url)'
+                        onChange={handleChange}
+                        className="form-control" 
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Game Summary</label>
+                    <input
+                        type='text'
+                        value={newForm.summary}
+                        name='summary'
+                        placeholder='game summary'
+                        onChange={handleChange}
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Original Release System</label>
+                    <input
+                        type='text'
+                        value={newForm.release_system}
+                        name='release_system'
+                        placeholder="game's original release system"
+                        onChange={handleChange}
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Original Release Date</label>
+                    <input
+                        type='text'
+                        value={newForm.release_date}
+                        name='release_date'
+                        placeholder="game's original release date"
+                        onChange={handleChange}
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Game's Heroes</label>
+                    <input
+                        type='text'
+                        value={newForm.heroes}
+                        name='heroes'
+                        placeholder="game's heroes"
+                        onChange={handleChange}
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="label" for="name">Game's Villains</label>
+                    <input
+                        type='text'
+                        value={newForm.villains}
+                        name='villains'
+                        placeholder="game's villains"
+                        onChange={handleChange}
+                        className="form-control"
+                    />
+                </div>
+                <input className="btn btn-info" type="submit" value="Add Game" />
             </form>
-
-            <Link to='/'><button>Return to Main Page</button></Link>
-        </div>
+                <Link to='/' ><button className="btn btn-warning">Return to Main Page</button></Link>
+            </div>
     );
 }
 

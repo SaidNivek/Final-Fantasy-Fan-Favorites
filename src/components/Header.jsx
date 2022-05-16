@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 const Header = (props) => {
     return (
         <header>
-            Final Fantasy Fan Favorites
-            <br></br>
-            <Link to='/create'><button>Create Game Page</button></Link>
+            <Link to="/"><h1>Final Fantasy Fan Favorites</h1></Link>
+            <Link to='/create'><button className="btn btn-info">Create Game Page</button></Link>
         </header>
     )
 }

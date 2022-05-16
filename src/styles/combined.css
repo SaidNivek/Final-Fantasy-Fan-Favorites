@@ -1,23 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 /* gradient found at: */
 /* https://codepen.io/LeonAGA/pen/rqYZNP */
-.all-games body {
+body {
   color: white;
   background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
   margin: 35px 0px 0px 100px;
-  border: 5px solid;
-  border-radius: 15px;
 }
-.all-games section {
-  margin: 35px 0px 0px 100px;
+
+.all-games {
+  font-family: "Space Mono", monospace;
+  margin: 50px;
   width: auto;
   height: auto;
   background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
   border: 5px solid;
   border-radius: 15px;
 }
-.all-games a {
-  text-decoration: none;
+.all-games section {
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
+  border: 5px solid;
+  border-radius: 15px;
+}
+.all-games #carouselExampleDark {
+  width: 75%;
+  border: 5px solid;
+  border-radius: 15px;
+}
+.all-games #carouselExampleDark img {
+  width: 100%;
+}
+.all-games .carousel-div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 20px 0;
+}
+
+.container {
+  font-size: 1.5rem;
+  width: 50vw;
+  line-height: 2.5rem;
+}
+
+body {
   color: white;
+  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
+  margin: 35px 0px 0px 100px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a :hover {
+  color: rgb(20, 226, 123);
 }
 
 /*# sourceMappingURL=combined.css.map */

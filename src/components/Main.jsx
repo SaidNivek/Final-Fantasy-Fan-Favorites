@@ -24,24 +24,26 @@ const Main = (props) => {
         return <h1>Loading...</h1>
     } else {        
         return (
-            <Routes>
-                <Route path='/'
-                    element={<AllGames 
-                        URL={URL} 
-                        games={props.games} 
-                        setGames={props.setGames} 
-                        getGameData={props.getGameData} 
-                    />} 
-                />
-                <Route path='/game/:id'
-                    element={<ShowGame />} />
-                <Route path='/create'
-                    element={<CreateGame 
-                        createGame={createGame}
-                        URL={props.URL}    
-                    />} 
-                />
-            </Routes>
+            <body className="all-games">
+                <Routes>
+                    <Route path='/'
+                        element={<AllGames 
+                            URL={URL} 
+                            games={props.games} 
+                            setGames={props.setGames} 
+                            getGameData={props.getGameData} 
+                            />} 
+                            />
+                    <Route path='/game/:id'
+                        element={<ShowGame />} />
+                    <Route path='/create'
+                        element={<CreateGame 
+                            createGame={createGame}
+                            URL={props.URL}    
+                            />} 
+                            />
+                </Routes>
+            </body>
         );
     }   
 }

@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch-sass": "sass --watch src/styles/combined.scss",
+    "watch-sass": "sass --watch src/styles/combined.scss src/styles/combined.css",
     "watch-nodemon": "nodemon",
     "dev": "concurrently -n sass,server -c 'bgMagenta.bold,bgGreen.bold' 'npm:watch-sass' 'npm:watch-nodemon'",
     "build": "react-scripts build",

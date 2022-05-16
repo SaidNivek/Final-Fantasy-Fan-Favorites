@@ -35,14 +35,13 @@ function App() {
         setGames={setGames} 
         getGameData={getGameData} 
       />
-      <div className="container">
+
         <Main 
           URL={URL} 
           games={games} 
           setGames={setGames} 
           getGameData={getGameData} 
         />
-      </div>
       <Footer />
     </>
   )
