@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/combined.css'
 import {useState, useEffect} from 'react'
 // IMPORT COMPONENTS
 import Header from './components/Header'
@@ -42,7 +42,6 @@ function App() {
           setGames={setGames} 
           getGameData={getGameData} 
         />
-
       </div>
       <Footer />
     </>

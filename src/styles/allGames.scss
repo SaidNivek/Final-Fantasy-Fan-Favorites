@@ -1,0 +1,25 @@
+/* gradient found at: */
+/* https://codepen.io/LeonAGA/pen/rqYZNP */
+.all-games{
+    body {
+        color: white;
+        background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+        margin: 35px 0px 0px 100px;
+        border: 5px solid;
+        border-radius: 15px;
+    }
+    
+    section {
+        margin: 35px 0px 0px 100px;
+        width: auto;
+        height: auto;
+        background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
+        border: 5px solid;
+        border-radius: 15px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

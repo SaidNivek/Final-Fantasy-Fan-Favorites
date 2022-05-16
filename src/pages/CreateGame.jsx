@@ -46,7 +46,7 @@ const CreateGame = (props) => {
                     type='text'
                     value={newForm.name}
                     name='name'
-                    placeholder='name'
+                    placeholder='game name'
                     onChange={handleChange}
                 />
                 <input
@@ -100,6 +100,8 @@ const CreateGame = (props) => {
                 />
                 <input type="submit" value="Add Game" />
             </form>
+
+            <Link to='/'><button>Return to Main Page</button></Link>
         </div>
     );
 }

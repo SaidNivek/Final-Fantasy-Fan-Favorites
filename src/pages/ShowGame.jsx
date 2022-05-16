@@ -4,6 +4,7 @@ const ShowGame = (props) => {
     return (
         <main>
             Test ShowGame Page
+            {console.log(props)}
         </main>
     );
 }

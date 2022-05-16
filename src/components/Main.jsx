@@ -1,6 +1,7 @@
 import React from 'react'
 import AllGames from '../pages/AllGames';
 import CreateGame from '../pages/CreateGame';
+import ShowGame from '../pages/ShowGame';
 import { Routes, Route } from 'react-router-dom'
 
 const Main = (props) => {
@@ -32,6 +33,8 @@ const Main = (props) => {
                         getGameData={props.getGameData} 
                     />} 
                 />
+                <Route path='/game/:id'
+                    element={<ShowGame />} />
                 <Route path='/create'
                     element={<CreateGame 
                         createGame={createGame}
