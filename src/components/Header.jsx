@@ -2,19 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
-
-    if(props.games){
-        const dropdownButtons = props.games.map(element => {
-            return (
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <Link to={`/game/${element._id}`} className="dropdown-item">{element.name}</Link>
-        </div>
-            )
-    })
-
-    console.log(dropdownButtons)
-}
-
+    // Sort the list to go in numerical order, even if the database is not
+    if(props.games) {
+        props.games.sort((a, b) => (a.number > b.number ? 1: -1))
+    }
     
     if (!props.games) {
         return <></>

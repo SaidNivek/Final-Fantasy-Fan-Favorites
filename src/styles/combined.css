@@ -81,6 +81,10 @@ img {
   border: none;
 }
 
+header {
+  margin: 0 10% 0 0;
+}
+
 .navbar-brand {
   color: white;
   text-decoration: none;
@@ -93,6 +97,13 @@ img {
 }
 .navbar-brand :visited {
   color: rgb(20, 226, 123);
+}
+
+.dropdown-menu {
+  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
+}
+.dropdown-menu .dropdown-item {
+  color: white;
 }
 
 .btn-info {
