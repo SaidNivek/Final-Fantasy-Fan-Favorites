@@ -16,14 +16,14 @@ const Header = (props) => {
                     <Link className="navbar-brand" to="/"><h1>Final Fantasy Fan Favorites</h1></Link>
                     <Link to='/create'><button className="btn btn-info">Create Game Page</button></Link>
                     {/* Game dropdown menu starts here */}
-                    <div class="dropdown">
-                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div className="dropdown">
+                        <button className="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Games
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             {props.games.map(element => {
                                 return (
-                                    <div className="dropdown-item" >
+                                    <div key={element._id} className="dropdown-item" >
                                         <Link to={`/game/${element._id}`} className="dropdown-item">{element.name}</Link>
                                     </div>
                             )})}
@@ -35,7 +35,4 @@ const Header = (props) => {
     }
 }
 
-
-
 export default Header
-

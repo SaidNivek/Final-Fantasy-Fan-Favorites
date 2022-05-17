@@ -19,12 +19,12 @@
   border: 5px solid;
   border-radius: 15px;
 }
-.all-games #carouselExampleDark {
+.all-games .carousel {
   width: 75%;
   border: 5px solid;
   border-radius: 15px;
 }
-.all-games #carouselExampleDark img {
+.all-games .carousel img {
   width: 100%;
 }
 .all-games .carousel-div {

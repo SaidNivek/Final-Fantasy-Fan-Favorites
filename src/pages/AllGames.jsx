@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Loading from '../components/Loading'
+import CarouselComp from '../components/CarouselComp'
 
 const AllGames = (props) => {
 
@@ -11,43 +12,7 @@ const AllGames = (props) => {
     } else {
         return (
             <div className="container">
-                <div className="carousel-div">
-                    <div id="carouselExampleDark" className="carousel carousel-dark slide" data-interval="true" data-bs-ride="carousel">
-                        <div className="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active" data-bs-interval="3000">
-                                <img src={props.games[4].logo} alt={props.games[0].name} />                                
-                                <div className="carousel-caption d-none d-md-block">
-                                    <h5>Most-liked game in the series</h5>
-                                </div>
-                            </div>
-                                <div className="carousel-item" data-bs-interval="2000">
-                                <img src={props.games[5].logo} alt={props.games[1].name} />
-                                <div className="carousel-caption d-none d-md-block">
-                                    <h5>Least-liked game in the series</h5>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={props.games[3].logo} alt={props.games[2].name} />
-                                <div className="carousel-caption d- d-md-block">
-                                    <h5>Forgotten in the middle of the pack...</h5>                                    
-                                </div>
-                            </div>
-                        </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                    </div>
-                </div>
+                <CarouselComp games={props.games}/>                
                 <section>
                     <div className="row">
                         {props.games.map(element => 
