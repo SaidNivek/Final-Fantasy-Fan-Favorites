@@ -52,6 +52,13 @@
   border-radius: 15px;
   margin: 10px;
 }
+.all-games .grow :hover {
+  transform: scale(1.25);
+  color: rgb(20, 226, 123);
+}
+.all-games .grow :active {
+  color: white;
+}
 
 .btn {
   margin: 20px 0;

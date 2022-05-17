@@ -55,4 +55,14 @@
         border-radius: 15px;
         margin: 10px;
     }
+
+    .grow {
+        :hover {
+            transform: scale(1.25);
+            color: rgb(20, 226, 123);
+        }
+        :active {
+            color: white;
+        }
+    }
 }
