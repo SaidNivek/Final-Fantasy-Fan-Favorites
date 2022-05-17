@@ -5,6 +5,7 @@ This site is called Final Fantasy Fan Favorites (4F for short). It is an app use
 
 ## Wireframes
 https://miro.com/app/board/uXjVO1VGPE4=/
+
 ### Home
 ![image](https://user-images.githubusercontent.com/89223981/168301418-f5616547-9152-473a-b207-cd51cfdb3893.png)
 
@@ -20,7 +21,7 @@ https://miro.com/app/board/uXjVO1VGPE4=/
 ![image](https://user-images.githubusercontent.com/89223981/168301788-e3979a79-f086-4fcb-93d9-dfe65e681777.png)
 
 ## ERD
-![image](https://user-images.githubusercontent.com/89223981/168903204-614155af-91af-44c5-8f38-f807e3fda7e2.png)
+![image](https://user-images.githubusercontent.com/89223981/168905362-7b33087d-495c-4e48-8b08-a78be02db892.png)
 
 ## MVP User Stories
 As a user, I want to:
