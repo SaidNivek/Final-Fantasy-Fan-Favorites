@@ -20,6 +20,19 @@ const Main = (props) => {
         // Update the game data when passing it in
         props.getGameData()
     }
+
+    const addHeart = async(id, likes) => {
+        console.log(id)
+        likes++
+        await fetch(props.URL + 'game/' + id, {
+            method: 'put',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({"likes": likes})
+        })
+        props.getGameData()
+    }
     
     
     if (!props.games) {
@@ -35,6 +48,7 @@ const Main = (props) => {
                             games={props.games} 
                             setGames={props.setGames} 
                             getGameData={props.getGameData} 
+                            addHeart={addHeart}
                             />} 
                     />
                     <Route path='/game/:id'
@@ -42,7 +56,8 @@ const Main = (props) => {
                             URL={URL} 
                             games={props.games} 
                             setGames={props.setGames} 
-                            getGameData={props.getGameData} 
+                            getGameData={props.getGameData}
+                            addHeart={addHeart} 
                         />} 
                     />
                     <Route path='/create'

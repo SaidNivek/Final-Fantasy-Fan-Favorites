@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel'
 const CarouselComp = (props) => {
     return (
         <div className="carousel-div">
-            <Carousel variant="dark" className="carousel">
+            <Carousel variant="dark" className="carousel" interval="2500">
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
