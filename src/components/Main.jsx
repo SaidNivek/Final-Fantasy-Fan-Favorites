@@ -4,6 +4,7 @@ import CreateGame from '../pages/CreateGame';
 import ShowGame from '../pages/ShowGame';
 import { Routes, Route } from 'react-router-dom'
 import Loading from './Loading';
+import NotFound from '../pages/NotFound';
 
 const Main = (props) => {
 
@@ -27,6 +28,7 @@ const Main = (props) => {
         return (
             <body className="all-games">
                 <Routes>
+                    <Route path='/*' element={<NotFound />} />
                     <Route path='/'
                         element={<AllGames 
                             URL={URL} 
