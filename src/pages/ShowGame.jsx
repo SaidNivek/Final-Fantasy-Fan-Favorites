@@ -5,9 +5,6 @@ const ShowGame = (props) => {
     const { id } = useParams()
     // Look for the game that matches the id that is passed to the useParams() functionality
     const game = props.games.find(person => person._id === id)
-    console.log(game)
-
-
     return (
         <>
             <main className="container show-game-div">
