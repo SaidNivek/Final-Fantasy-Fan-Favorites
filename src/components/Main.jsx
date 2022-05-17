@@ -33,15 +33,22 @@ const Main = (props) => {
                             setGames={props.setGames} 
                             getGameData={props.getGameData} 
                             />} 
-                            />
+                    />
                     <Route path='/game/:id'
-                        element={<ShowGame />} />
+                        element={<ShowGame
+                            URL={URL} 
+                            games={props.games} 
+                            setGames={props.setGames} 
+                            getGameData={props.getGameData} 
+                        />} 
+                    />
                     <Route path='/create'
                         element={<CreateGame 
                             createGame={createGame}
                             URL={props.URL}    
                             />} 
-                            />
+                    />
+
                 </Routes>
             </body>
         );

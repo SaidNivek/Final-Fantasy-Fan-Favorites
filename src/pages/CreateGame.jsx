@@ -12,8 +12,8 @@ const CreateGame = (props) => {
         likes: 0,
         release_system: '',
         release_date: '',
-        heroes: [],
-        villains: []
+        heroes: '',
+        villains: ''
     })
 
     // handle change, to update the key: value pairs in the newForm variable
@@ -25,10 +25,22 @@ const CreateGame = (props) => {
     // handle submit, when the form is submitted, to push the new form into the MongoDB cloud database
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createGame(newForm);
+        const heroesArray = newForm.heroes.split(', ')
+        const villainsArray = newForm.villains.split(', ')
+        props.createGame({
+            name: newForm.name,
+            number: newForm.number,
+            logo: newForm.logo,
+            summary: newForm.summary,
+            likes: 0,
+            release_system: newForm.release_system,
+            release_date: newForm.release_date,
+            heroes: heroesArray,
+            villains: villainsArray
+        });
         setNewForm({
             name: '',
-            number: null,
+            number: '',
             logo: '',
             summary: '',
             likes: 0,

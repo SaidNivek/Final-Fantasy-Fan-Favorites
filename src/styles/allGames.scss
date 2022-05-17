@@ -1,13 +1,6 @@
 /* gradient found at: */
 /* https://codepen.io/LeonAGA/pen/rqYZNP */
 
-
-
-body {
-    color: white;
-    background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
-    margin: 35px 0px 0px 100px;
-}
 .all-games{
     font-family: 'Space Mono', monospace;
     margin: 50px;
@@ -42,5 +35,24 @@ body {
         align-items: center;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+        :active {
+            color: rgb(20, 226, 123);
+        }    
+        :hover {
+            color: rgb(20, 226, 123);
+        }
+        :visited {
+            color: rgb(20, 226, 123);
+        }
+    }
 
+    .col-sm {
+        padding: 30px;
+        border: 2px solid white;
+        border-radius: 15px;
+        margin: 10px;
+    }
 }

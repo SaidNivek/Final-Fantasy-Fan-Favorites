@@ -19,19 +19,19 @@ const AllGames = (props) => {
                         </div>
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="3000">
-                                <img src={props.games[0].logo} alt={props.games[0].name} />                                
+                                <img src={props.games[4].logo} alt={props.games[0].name} />                                
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>Most-liked game in the series</h5>
                                 </div>
                             </div>
-                            <div className="carousel-item" data-bs-interval="2000">
-                            <img src={props.games[1].logo} alt={props.games[1].name} />
+                                <div className="carousel-item" data-bs-interval="2000">
+                                <img src={props.games[5].logo} alt={props.games[1].name} />
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>Least-liked game in the series</h5>
                                 </div>
                             </div>
                             <div className="carousel-item">
-                            <img src={props.games[2].logo} alt={props.games[2].name} />
+                                <img src={props.games[3].logo} alt={props.games[2].name} />
                                 <div className="carousel-caption d- d-md-block">
                                     <h5>Forgotten in the middle of the pack...</h5>                                    
                                 </div>
@@ -48,15 +48,18 @@ const AllGames = (props) => {
                     </div>
                 </div>
                 <section>
-                    {props.games.map(element => 
-                    <div key={element._id}>
-                        <Link to={`/game/${element._id}`} >
-                                
-                            <h2>{element.name}</h2>
-                            <p>Likes: {element.likes}</p>
-                        </Link>
+                    <div className="row">
+                        {props.games.map(element => 
+                        <div className="col-sm" key={element._id}>
+                            <Link to={`/game/${element._id}`} >
+                                    
+                                <h2>{element.name}</h2>
+                            </Link>
+                                <p>Hearts: {element.likes}</p>
+                                <i className="fa-solid fa-heart-circle-plus fa-xl grow"></i>
+                        </div>
+                    )}
                     </div>
-                )}
                 </section>
             </div>
         );

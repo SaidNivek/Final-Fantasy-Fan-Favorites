@@ -1,0 +1,15 @@
+$cololr-default : rgb(20, 226, 123);
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    :active {
+        color: rgb(20, 226, 123);
+    }    
+    :hover {
+        color: rgb(20, 226, 123);
+    }
+    :visited {
+        color: rgb(20, 226, 123);
+    }
+}

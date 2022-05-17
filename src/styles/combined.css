@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 /* gradient found at: */
 /* https://codepen.io/LeonAGA/pen/rqYZNP */
-body {
-  color: white;
-  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
-  margin: 35px 0px 0px 100px;
-}
-
 .all-games {
   font-family: "Space Mono", monospace;
   margin: 50px;
@@ -39,6 +33,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+.all-games a {
+  color: white;
+  text-decoration: none;
+}
+.all-games a :active {
+  color: rgb(20, 226, 123);
+}
+.all-games a :hover {
+  color: rgb(20, 226, 123);
+}
+.all-games a :visited {
+  color: rgb(20, 226, 123);
+}
+.all-games .col-sm {
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  margin: 10px;
+}
 
 .btn {
   margin: 20px 0;
@@ -50,18 +63,46 @@ body {
   line-height: 2.5rem;
 }
 
+main {
+  margin: 10px;
+  padding: 10px;
+}
+
+img {
+  border: 5px solid;
+  border-radius: 15px;
+}
+
+.show-game-div h2, .show-game-div h3 {
+  color: rgb(20, 226, 123);
+}
+
+.gif {
+  border: none;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+}
+.navbar-brand :active {
+  color: rgb(20, 226, 123);
+}
+.navbar-brand :hover {
+  color: rgb(20, 226, 123);
+}
+.navbar-brand :visited {
+  color: rgb(20, 226, 123);
+}
+
+.btn-info {
+  background-color: rgb(20, 226, 123) !important;
+}
+
 body {
   color: white;
   background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
   margin: 35px 0px 0px 100px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-a :hover {
-  color: rgb(20, 226, 123);
 }
 
 /*# sourceMappingURL=combined.css.map */

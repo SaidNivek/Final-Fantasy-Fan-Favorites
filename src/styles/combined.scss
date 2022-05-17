@@ -1,20 +1,15 @@
 @use 'allGames';
 @use 'createGame';
+@use 'showGame';
+@use 'header';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+.btn-info {
+    background-color: rgb(20, 226, 123) !important;
+}
 
 body {
     color: white;
     background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
     margin: 35px 0px 0px 100px;
 }
-
-a {
-    color: white;
-    text-decoration: none;
-    
-    :hover {
-        color: rgb(20, 226, 123);
-    }
-}
-
