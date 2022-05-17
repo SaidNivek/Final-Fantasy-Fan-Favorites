@@ -22,7 +22,6 @@ const Main = (props) => {
     }
 
     const addHeart = async(id, likes) => {
-        console.log(id)
         likes++
         await fetch(props.URL + 'game/' + id, {
             method: 'put',
