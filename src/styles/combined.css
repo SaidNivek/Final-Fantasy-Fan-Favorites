@@ -106,6 +106,27 @@ header {
   color: white;
 }
 
+footer {
+  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
+  border: 5px solid;
+  border-radius: 15px;
+  padding-top: 10px;
+  margin-top: -30px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a :active {
+  color: rgb(20, 226, 123);
+}
+footer a :hover {
+  color: rgb(20, 226, 123);
+}
+footer a :visited {
+  color: rgb(20, 226, 123);
+}
+
 .btn-info {
   background-color: rgb(20, 226, 123) !important;
 }
