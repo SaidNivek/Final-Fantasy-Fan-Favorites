@@ -3,6 +3,7 @@ import AllGames from '../pages/AllGames';
 import CreateGame from '../pages/CreateGame';
 import ShowGame from '../pages/ShowGame';
 import { Routes, Route } from 'react-router-dom'
+import Loading from './Loading';
 
 const Main = (props) => {
 
@@ -21,7 +22,7 @@ const Main = (props) => {
     
     
     if (!props.games) {
-        return <h1>Loading...</h1>
+        return <Loading />
     } else {        
         return (
             <body className="all-games">

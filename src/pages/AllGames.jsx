@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Loading from '../components/Loading'
 
 const AllGames = (props) => {
 
     props.games.sort((a, b) => (a.number > b.number ? 1: -1))
     
     if(!props.games) {
-        return <h2>Loading...</h2>
+        return <Loading />
     } else {
         return (
             <div className="container">
@@ -57,6 +58,8 @@ const AllGames = (props) => {
                             </Link>
                                 <p>Hearts: {element.likes}</p>
                                 <i className="fa-solid fa-heart-circle-plus fa-xl grow"></i>
+                                
+                                
                         </div>
                     )}
                     </div>
