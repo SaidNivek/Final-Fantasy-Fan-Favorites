@@ -5,6 +5,8 @@ import ShowGame from '../pages/ShowGame';
 import { Routes, Route } from 'react-router-dom'
 import Loading from './Loading';
 import NotFound from '../pages/NotFound';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 const Main = (props) => {
 
@@ -65,7 +67,8 @@ const Main = (props) => {
                             URL={props.URL}    
                             />} 
                     />
-
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/register' element={<Register />} />
                 </Routes>
             </body>
         );
