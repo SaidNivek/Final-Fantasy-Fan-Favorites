@@ -28,6 +28,15 @@
 .all-games .carousel img {
   width: 100%;
 }
+.all-games .carousel-caption {
+  background: -webkit-radial-gradient(-180px 0px, circle, #0053ad 300px, #001b85 500px, #000223);
+  color: white;
+  border: 5px solid;
+  border-radius: 15px;
+  opacity: 0.5;
+  margin-bottom: 15px;
+  padding: 0;
+}
 .all-games .carousel-div {
   padding: 10px;
   display: flex;
