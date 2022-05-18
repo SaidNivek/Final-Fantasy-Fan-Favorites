@@ -1,6 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import Loading from './Loading';
 
 const CarouselComp = (props) => {
 
@@ -18,41 +20,44 @@ const CarouselComp = (props) => {
                 leastLikes = game.likes
                 setLeastLikedGame(game)
             }
-            // console.log(game)
-            // console.log(mostLikedGame)
-            // console.log(leastLikedGame)
         })
     }
   
     useEffect(() => setGames(), [props.games, leastLikedGame])
 
-    if (mostLikedGame) {    
+    if (mostLikedGame && leastLikedGame) {    
         return (
             <div className="carousel-div">
                 <Carousel variant="dark" className="carousel" interval="2500">
                     <Carousel.Item>
-                        <img
-                        className="d-block w-100"
-                        src={mostLikedGame.logo}
-                        alt={props.games[5].name}
-                        />
-                        <Carousel.Caption className="carousel-caption">
-                        <p>Most Hearts</p>
-                        </Carousel.Caption>
+                        <Link to={`game/${mostLikedGame._id}`}>
+                            <img
+                            className="d-block w-100"
+                            src={mostLikedGame.logo}
+                            alt={mostLikedGame.name}
+                            />
+                            <Carousel.Caption className="carousel-caption">
+                                <p>Most Hearts</p>
+                            </Carousel.Caption>
+                        </Link>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                        className="d-block w-100"
-                        src={leastLikedGame.logo}
-                        alt={props.games[6].name}
-                        />
-                        <Carousel.Caption className="carousel-caption">
-                            <p>Least Hearts</p>
-                        </Carousel.Caption>
+                        <Link to={`game/${leastLikedGame._id}`}>
+                                <img
+                                className="d-block w-100"
+                                src={leastLikedGame.logo}
+                                alt={leastLikedGame.name}
+                                />
+                                <Carousel.Caption className="carousel-caption">
+                                    <p>Least Hearts</p>
+                                </Carousel.Caption>
+                            </Link>
                     </Carousel.Item>
                 </Carousel>
             </div>
         );
+    } else {
+        return <Loading />
     }
 }
 
