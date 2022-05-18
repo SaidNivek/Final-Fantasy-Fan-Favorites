@@ -14,6 +14,12 @@ const ShowGame = (props) => {
                 <main className="container show-game-div">
                     <img className="img-fluid" src={game.logo} alt={game.name} />
                     <h2><strong>{game.name}</strong></h2>
+                    <div className="row">
+                        <h3 className="col">Hearts: {game.likes}</h3>
+                        <div className="grow col">
+                            <i className="fa-solid fa-heart-circle-plus fa-xl " onClick={() => props.addHeart(game._id, game.likes)}></i>                             
+                        </div>
+                    </div>
                     <h4>{game.summary}</h4>
                     <h3><strong>Heroes:</strong></h3>
                     <div className="row row-cols-2">
