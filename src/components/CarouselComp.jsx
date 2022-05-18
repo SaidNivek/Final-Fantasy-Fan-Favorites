@@ -37,7 +37,7 @@ const CarouselComp = (props) => {
                             alt={mostLikedGame.name}
                             />
                             <Carousel.Caption className="carousel-caption">
-                                <p>Most Hearts</p>
+                                <p>Most Hearts: {mostLikedGame.likes}</p>
                             </Carousel.Caption>
                         </Link>
                     </Carousel.Item>
@@ -49,7 +49,7 @@ const CarouselComp = (props) => {
                                 alt={leastLikedGame.name}
                                 />
                                 <Carousel.Caption className="carousel-caption">
-                                    <p>Least Hearts</p>
+                                    <p>Least Hearts: {leastLikedGame.likes}</p>
                                 </Carousel.Caption>
                             </Link>
                     </Carousel.Item>

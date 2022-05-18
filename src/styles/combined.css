@@ -130,6 +130,11 @@ footer {
   padding-top: 10px;
   margin-top: -30px;
 }
+footer .link-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 footer a {
   color: white;
   text-decoration: none;
