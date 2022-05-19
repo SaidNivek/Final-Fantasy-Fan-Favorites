@@ -1,8 +1,18 @@
 import React from 'react'
-import { useState} from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const CreateGame = (props) => {
+    // Prevent users who do not have the role of admin from getting to the create game page
+    const navigate = useNavigate()
+    const { user } = useSelector((state) => state.auth)
+    useEffect(() => {
+        if(!user || user.role !=='admin') {
+            navigate('/')
+        } 
+    }, [user, navigate])
+
     // state to hold form data
     const [newForm, setNewForm] = useState({
         name: '',
