@@ -40,7 +40,7 @@ const Main = (props) => {
         return <Loading />
     } else {        
         return (
-            <body className="all-games">
+            <div className="all-games">
                 <Routes>
                     <Route path='/*' element={<NotFound />} />
                     <Route path='/'
@@ -70,7 +70,7 @@ const Main = (props) => {
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                 </Routes>
-            </body>
+            </div>
         );
     }   
 }

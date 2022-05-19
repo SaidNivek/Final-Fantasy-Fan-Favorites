@@ -1,4 +1,4 @@
-import React from 'react'
+import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
@@ -15,6 +15,8 @@ const Header = (props) => {
                 <nav className="navbar navbar-dark">
                     <Link className="navbar-brand" to="/"><h1>Final Fantasy Fan Favorites</h1></Link>
                     <Link to='/create'><button className="btn btn-info">Create Game Page</button></Link>
+                    <Link to='/login'><button className="btn btn-info"><FaSignInAlt /> Login</button></Link>
+                    <Link to='/register'><button className="btn btn-info"><FaUser /> Register</button></Link>
                     {/* Game dropdown menu starts here */}
                     <div className="dropdown">
                         <button className="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

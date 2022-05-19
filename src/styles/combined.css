@@ -128,7 +128,7 @@ footer {
   border: 5px solid;
   border-radius: 15px;
   padding-top: 10px;
-  margin-top: -30px;
+  margin-top: auto;
 }
 footer .link-div {
   display: flex;
@@ -151,6 +151,10 @@ footer a :visited {
 
 .btn-info {
   background-color: rgb(20, 226, 123) !important;
+}
+
+html, body {
+  height: 1%;
 }
 
 body {
