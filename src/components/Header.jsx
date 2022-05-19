@@ -1,18 +1,29 @@
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
-import {useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
 
 const Header = (props) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { user } = useSelector((state) => state.auth)
+
     // set a logout function that will log the user out and reset the state of auth
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
         navigate('/')
     }
+
+    // set the create game page button if the user has the admin role
+    let createGame = ''
+    if(user) {
+        if(user.role === 'admin') {
+            createGame = (<Link to='/create'><button className="btn btn-info">Create Game Page</button></Link>)
+        } else {
+            createGame = (<></>)}
+        }
+    
 
     // Sort the list to go in numerical order, even if the database is not
     if(props.games) {
@@ -26,7 +37,7 @@ const Header = (props) => {
             <header>
                 <nav className="navbar navbar-dark">
                     <Link className="navbar-brand" to="/"><h1>Final Fantasy Fan Favorites</h1></Link>
-                    <Link to='/create'><button className="btn btn-info">Create Game Page</button></Link>
+                    {createGame}
                     {user   ? (<button className="btn btn-info" onClick={onLogout}><FaSignOutAlt /> Logout</button>) 
                             : (<>
                                 <Link to='/login'><button className="btn btn-info"><FaSignInAlt /> Login</button></Link>
