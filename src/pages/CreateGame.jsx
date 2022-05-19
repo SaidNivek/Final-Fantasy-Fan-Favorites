@@ -18,7 +18,6 @@ const CreateGame = (props) => {
 
     // handle change, to update the key: value pairs in the newForm variable
     const handleChange = (event) => {
-        console.log(event.target.value)
         setNewForm({...newForm, [event.target.name]: event.target.value})
     }
 
