@@ -16,13 +16,13 @@ const AllGames = (props) => {
     } else {
         return (
             <div className="container">
-                <CarouselComp games={props.games}/>                
+                <CarouselComp   games={props.games}
+                                setgames={props.setGames}/>                
                 <section>
                     <div className="row">
                         {props.games.map(element => 
                         <div className="col-sm" key={element._id}>
-                            <Link to={`/game/${element._id}`} >
-                                    
+                            <Link to={`/game/${element._id}`} >                                    
                                 <h2>{element.name}</h2>
                             </Link>
                             {/* If no user, cannot heart any games.  If user logged in, can heart games.  */}
