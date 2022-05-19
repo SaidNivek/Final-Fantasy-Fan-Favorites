@@ -33,10 +33,6 @@ const AllGames = (props) => {
                                         </div>    
                                     </>
                             ) : (<p>Hearts: {element.likes}</p>)}
-                            {/* <p>Hearts: {element.likes}</p>
-                            <div className="grow">
-                                <i className="fa-solid fa-heart-circle-plus fa-xl" onClick={() => props.addHeart(element._id, element.likes)}></i>                             
-                            </div>                                     */}
                         </div>
                     )}
                     </div>

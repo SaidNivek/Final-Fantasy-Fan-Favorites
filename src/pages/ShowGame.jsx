@@ -1,9 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
+import { useSelector } from 'react-redux';
 
 const ShowGame = (props) => {
     const { id } = useParams()
+    const {user} = useSelector((state) => state.auth)
     // Look for the game that matches the id that is passed to the useParams() functionality
     const game = props.games.find(person => person._id === id)
     if(!game) {
@@ -15,10 +17,14 @@ const ShowGame = (props) => {
                     <img className="img-fluid" src={game.logo} alt={game.name} />
                     <h2><strong>{game.name}</strong></h2>
                     <div className="row">
-                        <h3 className="col">Hearts: {game.likes}</h3>
-                        <div className="grow col">
-                            <i className="fa-solid fa-heart-circle-plus fa-xl " onClick={() => props.addHeart(game._id, game.likes)}></i>                             
-                        </div>
+                        {/* If no user, cannot heart any games.  If user logged in, can heart games.  */}
+                        {user ? (<>
+                                    <h3>Hearts: {game.likes}</h3>
+                                    <div className="grow">
+                                        <i className="fa-solid fa-heart-circle-plus fa-xl" onClick={() => props.addHeart(game._id, game.likes)}></i>                             
+                                    </div>    
+                                </>
+                        ) : (<h3>Hearts: {game.likes}</h3>)}
                     </div>
                     <h4>{game.summary}</h4>
                     <h3><strong>Heroes:</strong></h3>
