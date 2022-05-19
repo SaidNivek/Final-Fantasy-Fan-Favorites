@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Loading from '../components/Loading'
 import CarouselComp from '../components/CarouselComp'
 import { useSelector } from 'react-redux'
-import { useEffect } from 'react'
+
 
 const AllGames = (props) => {
     // get the user from the redux state
