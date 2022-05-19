@@ -9,6 +9,10 @@
     background-color: rgb(20, 226, 123) !important;
 }
 
+html, body {
+    height: 1%
+}
+
 body {
     color: white;
     background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
