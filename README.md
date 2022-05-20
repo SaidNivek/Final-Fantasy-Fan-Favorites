@@ -113,7 +113,9 @@ To download the source code, go here: https://github.com/SaidNivek/Final-Fantasy
 Please see incomplete post-MVP user stories above
 
 ## API
-The API is actually a MongoDB that I seeded. https://cloud.mongodb.com/v2/627ec3d965154f43c1d8f0a5#metrics/replicaSet/627ec57d6644d51fed87a4b1/explorer/myFirstDatabase/users/find
+The API is actually a MongoDB that I seeded: https://cloud.mongodb.com/v2/627ec3d965154f43c1d8f0a5#metrics/replicaSet/627ec57d6644d51fed87a4b1/explorer/myFirstDatabase/users/find
+The Hroku page is here:
+https://dashboard.heroku.com/apps/final-fantasy-fan-favorites
 
 ### Unused API from proposal
 [IGDB API](https://api-docs.igdb.com/#about) - Video Game API
