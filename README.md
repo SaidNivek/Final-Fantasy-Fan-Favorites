@@ -54,6 +54,8 @@ As a user, I want to:
 
 ### Post MVP User Stories - Complete
 As a user, I want to:
+- Loading screen animation (spinning dragon)
+- 404 errors if bad URLs are input
 - Be able to register as a user
 - Be able to login as a user
 - Be able to logout as a user
