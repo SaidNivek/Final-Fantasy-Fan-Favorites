@@ -8,7 +8,7 @@ const About = props => {
         <div>
             <p>Test</p>
         </div>
-
+        <hr></hr>
         <Footer />
         </>
     )    

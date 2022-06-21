@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="text-center">
+        <footer className="">
             <div className="d-flex justify-content-center">
                 <a className="outside-link" href="https://www.linkedin.com/in/saidnivek/"><h4>LinkedIn</h4></a> 
                 <h4> | </h4>
