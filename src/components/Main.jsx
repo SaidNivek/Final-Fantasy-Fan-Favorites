@@ -7,6 +7,7 @@ import Loading from './Loading';
 import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import About from '../pages/About';
 
 const Main = (props) => {
 
@@ -67,6 +68,7 @@ const Main = (props) => {
                             URL={props.URL}    
                             />} 
                     />
+                    <Route path='/about' element={<About />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                 </Routes>

@@ -37,6 +37,7 @@ const Header = (props) => {
             <header>
                 <nav className="navbar navbar-dark">
                     <Link className="navbar-brand" to="/"><h1>Final Fantasy Fan Favorites</h1></Link>
+                    <Link to="/about"><button className="btn btn-info">About</button></Link>
                     {createGame}
                     {user   ? (<button className="btn btn-info" onClick={onLogout}><FaSignOutAlt /> Logout</button>) 
                             : (<>
