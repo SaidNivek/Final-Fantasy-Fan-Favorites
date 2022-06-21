@@ -3,6 +3,23 @@
 ## Project Description
 This site is called Final Fantasy Fan Favorites (4F for short). It is an app used to rate all of the main, numbered Final Fantasy games (1-15) via "likes".  Users will be able to see a list of the numbered Final Fantasy games, rated in order from most likes to least likes, which will update dynamically.  Users can click on a secific game and see a breif description of the game and some other relevant data (year released, system originally released on, main heroes/villains).  In th efuture, I'd like to add the functionality to "like" heroes/villains to determine the most popular heroes or villains throughout the Final Fantasy series, which would also be displayed and updated dynamically.
 
+## MVP Screens
+
+### Home MVP
+![image](https://user-images.githubusercontent.com/89223981/169402543-d27d8906-a486-48a3-9a4b-dae09bf846dc.png)
+
+### Register Page MVP
+![image](https://user-images.githubusercontent.com/89223981/169402612-26eb27ef-4857-48a5-a694-12f2652abbcb.png)
+
+### Login Page MVP
+![image](https://user-images.githubusercontent.com/89223981/169402654-cea539b6-8e29-45b5-93c6-7ccde9a6178a.png)
+
+### Create Game Page MVP
+![image](https://user-images.githubusercontent.com/89223981/169402705-40cbb7af-323b-4254-b68e-839cfdc5f9a7.png)
+
+### Show Game Page MVP
+![image](https://user-images.githubusercontent.com/89223981/169402837-238ba09c-ec95-4df9-8a78-9ddf2f3d14d7.png)
+
 ## Wireframes
 https://miro.com/app/board/uXjVO1VGPE4=/
 
@@ -25,25 +42,41 @@ https://miro.com/app/board/uXjVO1VGPE4=/
 
 ## MVP User Stories
 As a user, I want to:
-- See a carousel of the most liked games
-- See a list of the Final Fantasy games in order from 1 -15, with "Like" buttons associated with each
-- Click on a like button and see the counter go up by 1
+- See a carousel of the most and least liked games
+- See a list of the Final Fantasy games in order from 1 -15, with "Heart" buttons associated with each
+- Click on a heart button and see the counter go up by 1
 - Click on a Final Fantasy game number and be taken to a page with a picture of the logo and information about that game, including characters
 - Have a navbar option that also lists the final fantasy games in order from 1 -15 when selected
 - Click on a nav bar drop down item and be taken to the same page as above
-- See a like button on the individual game's page that will also increase the like counter by 1
-- See a footer with information about me (LinkedIn / GitHub, API attribution)
+- See a heart button on the individual game's page that will also increase the heart counter by 1
+- See a footer with information about me (LinkedIn / GitHub)
 - See a header with the logo / name of the app
 
-### Post MVP User Stories
+### Post MVP User Stories - Complete
 As a user, I want to:
-- See a careousel of the most liked games and characters
+- Loading screen animation (spinning dragon)
+- 404 errors if bad URLs are input
+- Be able to register as a user
+- Be able to login as a user
+- Be able to logout as a user
+- Only be able to click on a heart if I'm logged in
+- Only be able to access the create game page if I have the user role of admin
+- See the carousel update dynamically as the likes change/increase
+
+### Post MVP User Stories - Incomplete
+As a user, I want to:
+- Only be able to heart a game or character one time (maybe one time per 24hr period?)
+- Have the heart+ icon change to a heart- icon after hearting that specific game
+- Remove my heart from a game with the heart- icon and see the counter go down
+- See a careousel of the most and least liked games and characters
 - See a list of the most liked characters on the home page
 - Click a like button near the most-liked characters on the homepage and see the counter increase by 1
 - Have a drop down option for characters that allows the user to click on a game and then opens into an embedded dropdown to select a character from that game
 - Have a dropdown option that displays the characters in alphabetical order from all games
 - Be able to click on a character from the dropdown menu and be taken to a page with an image of that character with information (maybe animated sprites, using the sprite sheets from Final Fantasy Record Keeper or Final Fantasy Brave Exvius)
 - See a like button on the page of the character that will increase by 1 when clicked
+- Comments for games
+- Comments for characters
 
 ## Component Hierarchy
 ![image](https://user-images.githubusercontent.com/89223981/168375074-51926da1-74ca-47fb-a64d-aa3865c35fc6.png)
@@ -62,7 +95,29 @@ As a user, I want to:
 - Update: /game/update/:id
 - Delete: /game/delete
 
+## Installation Instructions
+To view and interact with the site, go here: https://main--astonishing-sable-f9d3a9.netlify.app/
+
+To download the source code, go here: https://github.com/SaidNivek/Final-Fantasy-Fan-Favorites-Frontend Fork the code to your own GitHub page. Clone the repo to your local environment. Run npm install for all dependencies. Note: The database will not be connected, so you will need to link a Mongo Database yourself in order for the site to work properly or have a data.js file with JSON data to properly interact with the source code.
+
+## Known Issues
+- Users can endlessly click on likes to make the counter go up infinitely
+- Formatting issues on small devices (phones in portrait mode is the main issue)
+- Password not showing asterisks, showing the full text
+
+## Major Hurdles
+- Learning how to use JWT tokens was a pain point
+- Learning how to use very basic react redux took an entire day, from 10am - 10pm, with breaks (of course)
+
+## Future Goals & Implementation
+Please see incomplete post-MVP user stories above
+
 ## API
+The API is actually a MongoDB that I seeded: https://cloud.mongodb.com/v2/627ec3d965154f43c1d8f0a5#metrics/replicaSet/627ec57d6644d51fed87a4b1/explorer/myFirstDatabase/users/find
+The Hroku page is here:
+https://dashboard.heroku.com/apps/final-fantasy-fan-favorites
+
+### Unused API from proposal
 [IGDB API](https://api-docs.igdb.com/#about) - Video Game API
 
 ### Game Response
