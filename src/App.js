@@ -2,7 +2,7 @@ import './styles/combined.css'
 import { useState, useEffect } from 'react'
 // IMPORT COMPONENTS
 import Header from './components/Header'
-import Footer from './components/Footer'
+
 
 
 // IMPORT PAGES
@@ -43,7 +43,7 @@ function App() {
           setGames={setGames} 
           getGameData={getGameData} 
         />
-      <Footer />
+      
     </>
   )
 }
